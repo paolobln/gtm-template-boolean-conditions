@@ -15,5 +15,5 @@
 homepage: "https://www.paolobietolini.xyz"
 documentation: "www.paolobietolini.xyz"
 versions:
-  - sha: e46ade074d92972f11f77455c003330992e184fb
+  - sha: c735301f2ea784deefc8d4659329cf0bedc8c70c
     changeNotes: Initial Version
