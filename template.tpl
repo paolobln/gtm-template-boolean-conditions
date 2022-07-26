@@ -9,8 +9,6 @@ Google may provide), as modified from time to time.
 ___INFO___
 
 {
-  "displayName": "Boolean conditions",
-  "categories": ["PERSONALIZATION", "UTILITY", "TAG_MANAGEMENT"],
   "type": "MACRO",
   "id": "cvt_temp_public_id",
   "version": 1,
@@ -95,6 +93,7 @@ const inputA = data.inputVar;
 const inputB = data.inputUsr;
 const condition = data.condition;
 
+log(inputA + ' ' + condition + ' ' + inputB);
 
 if (condition === 'equals') {
   return inputA === inputB;
@@ -109,8 +108,6 @@ if (condition === 'equals') {
 } else if (condition === 'starts with') {
   return inputA.indexOf(inputB) === 0;
 }
-
-log('data =', data);
 
 
 ___WEB_PERMISSIONS___
@@ -139,11 +136,90 @@ ___WEB_PERMISSIONS___
 
 ___TESTS___
 
-scenarios: []
+scenarios:
+- name: A equals B
+  code: |-
+    const mockData = {
+      inputVar : 'xxx',
+      inputUsr : 'xxx',
+      condition : 'equals'
+    };
+
+    // Call runCode to run the template's code.
+    const variableResult = runCode(mockData);
+
+    // Verify that the variable returns a result.
+    assertThat(variableResult).isNotEqualTo(undefined);
+- name: A does not equal B
+  code: |-
+    const mockData = {
+      inputVar : 'xxx',
+      inputUsr : 'abc',
+      condition : 'does not equal'
+    };
+
+    // Call runCode to run the template's code.
+    const variableResult = runCode(mockData);
+
+    // Verify that the variable returns a result.
+    assertThat(variableResult).isNotEqualTo(undefined);
+- name: A contains B
+  code: |-
+    const mockData = {
+      inputVar : 'https://www.google.com',
+      inputUsr : 'google',
+      condition : 'contains'
+    };
+
+    // Call runCode to run the template's code.
+    const variableResult = runCode(mockData);
+
+    // Verify that the variable returns a result.
+    assertThat(variableResult).isNotEqualTo(undefined);
+- name: A does not contain B
+  code: |-
+    const mockData = {
+      inputVar : 'https://www.google.com',
+      inputUsr : '/test.html',
+      condition : 'does not contain'
+    };
+
+    // Call runCode to run the template's code.
+    const variableResult = runCode(mockData);
+
+    // Verify that the variable returns a result.
+    assertThat(variableResult).isNotEqualTo(undefined);
+- name: A does not starts with B
+  code: |-
+    const mockData = {
+      inputVar : 'https://www.google.com',
+      inputUsr : 'ftp://',
+      condition : 'does not start with'
+    };
+
+    // Call runCode to run the template's code.
+    const variableResult = runCode(mockData);
+
+    // Verify that the variable returns a result.
+    assertThat(variableResult).isNotEqualTo(undefined);
+- name: A starts with B
+  code: |-
+    const mockData = {
+      inputVar : 'https://www.google.com',
+      inputUsr : 'http',
+      condition : 'starts with'
+    };
+
+    // Call runCode to run the template's code.
+    const variableResult = runCode(mockData);
+
+    // Verify that the variable returns a result.
+    assertThat(variableResult).isNotEqualTo(undefined);
+setup: ''
 
 
 ___NOTES___
 
-Created on 26/7/2022, 18:51:40
+Created on 26/7/2022, 20:22:04
 
 
