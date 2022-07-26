@@ -15,9 +15,9 @@
 homepage: "https://www.paolobietolini.xyz"
 documentation: "www.paolobietolini.xyz"
 versions:
-# Latest version
-- sha: 6188c69d840f27a19307cd8b53c2fa9b623d4d5c
-  changeNotes: Adds tests.
-# Older versions
-  - sha: c735301f2ea784deefc8d4659329cf0bedc8c70c
+  # Latest version
+  - sha: 6188c69d840f27a19307cd8b53c2fa9b623d4d5c
+    changeNotes: Add tests
+  # Older versions
+   - sha: c735301f2ea784deefc8d4659329cf0bedc8c70c
     changeNotes: Initial Version
