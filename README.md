@@ -4,7 +4,8 @@
 A flexible macro template for Boolean comparisons within Google Tag Manager, enabling conditional checks between variables.
 
 ## Resources
-||
+|||
+|----|----|
 |[Template Gallery]()|
 
 ## Inputs
