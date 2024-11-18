@@ -5,7 +5,6 @@ A flexible macro template for Boolean comparisons within Google Tag Manager, ena
 
 ## Resources
 ||
-|---|
 |[Template Gallery]()|
 
 ## Inputs
